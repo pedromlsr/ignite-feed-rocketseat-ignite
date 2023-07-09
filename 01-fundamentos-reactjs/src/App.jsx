@@ -6,6 +6,41 @@ import styles from './App.module.css';
 
 import './global.css';
 
+// author: { avatarUrl: "", name: "", role: "" }
+// publishedAt: Date
+// content: String
+
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://github.com/pedromlsr.png',
+      name: 'Pedro Rodrigues',
+      role: 'Trainee Programmer'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+      { type: 'link', content: 'jane.design/doctorcare' },
+    ],
+    publishedAt: new Date('2023-07-08 11:21:00')
+  },
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://github.com/Talles_Souza.png',
+      name: 'Talles Souza',
+      role: 'Trainee Programmer'
+    },
+    content: [
+      { type: 'paragraph', content: 'Fala galeraa 👋' },
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀' },
+      { type: 'link', content: 'jane.design/doctorcare' },
+    ],
+    publishedAt: new Date('2023-07-08 11:21:00')
+  },
+]
+
 export function App() {
   return (
     <div>
@@ -15,14 +50,15 @@ export function App() {
           <Sidebar />
         </aside>
         <main>
-          <Post
-            author="Pedro Rodrigues"
-            content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perspiciatis cumque suscipit iste, blanditiis, consectetur ea fugit id obcaecati, quidem quasi eligendi tempore reprehenderit quos commodi veniam sapiente explicabo voluptatem!"
-          />
-          <Post
-            author="Outro cara"
-            content="Outra assunto"
-          />
+          {posts.map(post => {
+            return (
+              <Post
+                author={post.author}
+                content={post.content}
+                publishedAt={post.publishedAt}
+              />
+            )
+          })}
         </main>
       </div>
     </div>
