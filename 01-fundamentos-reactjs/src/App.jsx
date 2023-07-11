@@ -26,9 +26,9 @@ const posts = [
     publishedAt: new Date('2023-07-08 11:21:00')
   },
   {
-    id: 1,
+    id: 2,
     author: {
-      avatarUrl: 'https://github.com/Talles_Souza.png',
+      avatarUrl: 'https://github.com/Talles-Souza.png',
       name: 'Talles Souza',
       role: 'Trainee Programmer'
     },
