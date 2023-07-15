@@ -78,13 +78,18 @@ export function Post({ post }: PostProps) {
       <header>
         <div className={styles.author}>
           <Avatar src={post.author.avatarUrl} />
+          
           <div className={styles.authorInfo}>
             <strong>{post.author.name}</strong>
+
             <span>{post.author.role}</span>
           </div>
         </div>
 
-        <time title={publishedDateFormatted} dateTime={post.publishedAt.toISOString()}>
+        <time
+          title={publishedDateFormatted}
+          dateTime={post.publishedAt.toISOString()}
+        >
           {publishedDateRelativeToNow}
         </time>
       </header>

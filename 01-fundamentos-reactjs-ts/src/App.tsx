@@ -6,10 +6,6 @@ import styles from './App.module.css';
 
 import './global.css';
 
-// author: { avatarUrl: "", name: "", role: "" }
-// publishedAt: Date
-// content: String
-
 const posts: PostType[] = [
   {
     id: 1,
@@ -38,17 +34,19 @@ const posts: PostType[] = [
       { type: 'link', content: 'jane.design/doctorcare' },
     ],
     publishedAt: new Date('2023-07-08 11:21:00')
-  },
+  }
 ]
 
 export function App() {
   return (
     <div>
       <Header />
+      
       <div className={styles.wrapper}>
         <aside>
           <Sidebar />
         </aside>
+
         <main>
           {posts.map(post => {
             return (

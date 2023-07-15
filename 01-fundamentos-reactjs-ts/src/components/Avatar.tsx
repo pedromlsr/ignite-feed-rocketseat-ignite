@@ -10,9 +10,6 @@ export function Avatar({hasBorder = true, ...props}: AvatarProps) {
     <img
       className={hasBorder ? styles.avatarWithBorder : styles.avatar}
       {...props}
-      // src={src}
-      // alt={alt}
-      // title={title}
     />
   )
 }
